@@ -1,0 +1,133 @@
+/* LAYOUT: MAIN
+   ========================================================================== */
+/* Base */
+.main {
+  padding-top: 1rem;
+  /*border-right: 1px solid $platinum;*/
+}
+.ant-layout, .ant-layout * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ant-row, .ant-row:after, .ant-row:before {
+  display: -ms-flexbox;
+  display: flex;
+}
+.ant-row {
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.ant-steps-label-vertical .ant-steps-item {
+  overflow: visible;
+}
+.ant-steps {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum","tnum";
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 0;
+}
+.ant-steps-item {
+  position: relative;
+  display: inline-block;
+  -ms-flex: 1;
+  flex: 1 1;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+::selection {
+  color: #fff;
+  background: #029e47!important;
+}
+
+/*card*/
+.ant-card-bordered {
+  border: 1px solid $green;
+}
+.ant-card {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum","tnum";
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.ant-card-head {
+  min-height: 48px;
+  margin-bottom: -1px;
+  padding: 0 24px;
+  color: rgba(0,0,0,.85);
+  font-weight: 500;
+  font-size: 16px;
+  background: transparent;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 2px 2px 0 0;
+}
+.ant-card-head-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.ant-card-head-title {
+  display: inline-block;
+  -ms-flex: 1;
+  flex: 1 1;
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.icon-menu-button {
+  width: 50px!important;
+  height: 50px!important;
+  max-width: 50px!important;
+  min-width: 50px!important;
+  max-height: 50px!important;
+  min-height: 50px!important;
+}
+.ant-btn-primary {
+  color: #fff;
+  background-color: #029e47;
+  border-color: #00bf55;
+}
+/* Message Dashboard */
+.message-dashboard {
+  text-align: center;
+
+  img {
+    max-width: 70%;
+    /*padding-bottom: 1em;*/
+  }
+
+  p {
+    padding-left: 5em;
+    padding-right: 5em;
+
+    span {
+      font-weight: $bold;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/* Base Typography*/
+h1 {
+    font-family: $poppins;
+}
+
+h2, h3, h4, p {
+    font-family: $montserrat;
+}
+
+//size and weight
+h1 {
+	font-size: $xx-large;
+	font-weight: $font-black;
+    font-style: italic;
+    padding-top: 1rem;
+    color: $white;
+    max-width: 650px;
+}
+
+h2 {
+    font-size: $x-large;
+    font-weight: $font-black;
+}
+
+h3 {
+    font-size: $large;
+    font-weight: $font-regular;
+}
+
+h4 {
+    font-size: $large;
+    font-weight: $font-regular;
+}
+
+p {
+    font-size: $medium;
+    font-weight: $font-light;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: $x-large;
+        padding-top: 5rem;
+    }
+}

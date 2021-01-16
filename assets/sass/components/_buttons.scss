@@ -1,0 +1,51 @@
+/* COMPONENTS: BUTTONS
+   ========================================================================== */
+/* Base */
+.button {
+  padding: 1rem 4rem;
+  margin-bottom: 1rem ;
+  cursor: pointer;
+  font-family: $montserrat;
+  font-size: $medium;
+  font-weight: $font-black;
+  border-radius: 25px;
+}
+/*Buscar*/
+#basic-addon2 {
+  color: $white;
+  background-color: $green;
+}
+
+/* Button Scheme */
+.button_primary {
+  border: none;
+  padding: 1rem 4.5rem 1rem 4.5rem;
+  color: $white;
+  background-color: $green;
+
+  &:hover {
+    background-color: $turquesa;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: $green;
+  }
+}
+.button_second {
+  padding: 1rem 2rem 1rem 2rem;
+  color: $gris;
+  background-color: $white;
+  border: 1px solid $green;
+
+  &:hover {
+    color: $gris;
+    background-color: $celeste;
+    border: none;
+  }
+
+  &:focus {
+    color: $gris;
+    background-color: $white;
+  }
+}

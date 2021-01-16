@@ -1,0 +1,53 @@
+/* COMPONENTS: FOOTER
+   ========================================================================== */
+   .footer {
+    height: 206px;
+    background-color: $green;
+    color: $white;
+	text-align: center;
+    & img {
+        max-width: 120px;
+        display: block;
+        margin: 0 auto;
+        padding-top: 85px;
+    }
+}
+.footer__web {
+  padding-top: 1rem;
+  
+
+}
+#youtube, #instagram, #facebook {
+  display: inline-block;
+  color: white;
+  font-size: 1.6rem;
+  padding-top: 0.7rem;
+}
+.btn-instagram {
+  background-color: $turquesa;
+  border-radius: 50%;
+  width: 4%;
+  display: inline-block;
+  align-content: center;
+}
+
+.btn-facebook {
+  background-color: $blue;
+  border-radius: 50%;
+  width: 4%;
+  display: inline-block;
+  align-content: center;
+}
+.btn-youtube {
+  background-color: $celeste;
+  border-radius: 50%;
+  width: 4%;
+  display: inline-block;
+  align-content: center;
+}
+// Media Query
+@media (max-width: 768px) {
+    .footer img {
+        max-width: 90px;
+    }
+}

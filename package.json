@@ -1,0 +1,54 @@
+{
+    "name": "reciclaje",
+    "version": "1.0.0",
+    "description": "Reciclaje",
+    "main": "index.html",
+    "directories": {
+      "test": "test"
+    },
+    "scripts": {
+      "test": "jest --coverage",
+    
+      "eslint": "eslint --ext .js src/ test/",
+      "htmlhint": "htmlhint src/*.html",
+      "pretest": "npm run eslint && npm run htmlhint",
+      "deploy": "gh-pages-deploy",
+      "clean-source": "rimraf README.md src webroot package.json"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/gabagonzalez/xxx.git"
+    },
+    "keywords": [
+      "Firebase",
+      "red",
+      "social",
+      "npm",
+      "test",
+      "metro"
+    ],
+    "author": "Gabriela Gonzalez",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/gabagonzalez/xxx/issues"
+    },
+    "homepage": "https://github.com/gabagonzalez/xxx#readme",
+    "dependencies": {
+      "@babel/core": "^7.4.5",
+      "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+      "babel-core": "^6.26.3",
+      "babel-jest": "^24.8.0",
+      "body-parser": "^1.19.0",
+      "eslint": "^5.16.0",
+      "eslint-plugin-jest": "^22.6.4",
+      "express": "^4.17.1",
+      "gh-pages": "^2.0.1",
+      "htmlhint": "^0.11.0",
+      "jest": "^24.8.0",
+      "server": "^1.0.30"
+    },
+    "devDependencies": {
+      "gh-pages-deploy": "^0.5.1"
+    }
+  }
+  
