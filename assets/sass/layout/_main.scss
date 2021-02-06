@@ -1,6 +1,40 @@
 /* LAYOUT: MAIN
    ========================================================================== */
 /* Base */
+header {
+  background-image: url(./images/bg-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  padding-bottom: 10rem;
+}
+/*
+.carousel-indicators {
+  top: 50px;
+}*/
+
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/*Section Carrusel*/
+.img-carrusel {
+  max-width: 16rem;
+}
+.carousel-indicators {
+  top: 12.5rem;
+
+}
+.carousel-indicators li {
+  width: 0.7925rem;
+  height: 0.7925rem;
+  border-radius: 50%;
+  background-color: $red;
+}
+
 .main {
   padding-top: 1rem;
   /*border-right: 1px solid $platinum;*/
@@ -113,21 +147,11 @@
   background-color: #029e47;
   border-color: #00bf55;
 }
-/* Message Dashboard */
-.message-dashboard {
-  text-align: center;
-
-  img {
-    max-width: 70%;
-    /*padding-bottom: 1em;*/
-  }
-
-  p {
-    padding-left: 5em;
-    padding-right: 5em;
-
-    span {
-      font-weight: $bold;
-    }
-  }
+.platos {
+  background-color: $red;
+}
+#trabajos img {
+  width: 100%;
+  height: 232px;
+  object-fit: cover;
 }

@@ -8,7 +8,6 @@
   <title>Recomiendo Chile</title>
   <!-- Google Fonts - Poppins 800| Montserrat 300 400 700-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://www.starken.cl/fonts.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@800&display=swap" rel="stylesheet">
   <!-- Font Awesome - Icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -16,190 +15,300 @@
   <!-- Main Styles -->
   <link rel="stylesheet" href="assets/main.css">
 </head>
-<!--"scss": "node-sass -watch scss -o css",-->
+<!--"scss": "node-sass -watch scss -o css",
+   sass --watch assets/sass/main.scss assets/main.css
+-->
 
 <body>
-
-  <header class="header ">
-    <!-- start Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-black ">
-      <a class="navbar-brand d-none d-sm-block" href="#">
-        <img src="assets/images/Logo.png" alt="Logo recomiendo Chile">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Cotizador <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sucursales</a>
-          </li>
-          
-        </ul>
-        
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-      
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <!--<i class="fa fa-recycle" aria-hidden="true"></i>-->
-              Productora</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <!--<i class="fa fa-phone" aria-hidden="true"></i>-->
-              Programa
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              Contacto
-            </a>
-            <!--<div class="dropdown-menu container-fluid" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Iniciar sesión</a>
-              <a class="dropdown-item" href="#">Registrarse</a>
-            </div>-->
-          </li>
-        </ul>
-      </div>
+    <!--Barra de Navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white font-weight-bold fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"> <img src="assets/images/Logo.png" alt="Logo Recomiendo"></a>
+            <form class="form-inline my-2 my-lg-0 d-none d-lg-block">
+                <input id="searchText" class="form-control border border-danger mr-sm-2" type="search" placeholder="Buscar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mi">Productora<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programas">Programas</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Whatsapp
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </button>
+                
+            </div>
+        </div>
     </nav>
-    <!-- end Navigation -->
-  </header>
+  
+    <!--header - Sección Hero-->
+    <header class="hero text-light text-right py-5 mt-5">
+        <div class="container">
+            <h1 class="texto-responsivo font-weight-bold my-5">Descubre Recomiendo Chile</h1>
+            <p class="my-5 font-weight-bold">Disfruta de los nuevos eventos y los últimos capítulos del programa.</p>
+            <a href="#programas" class="btn btn-outline-secondary btn-lg">Programas</a>
+            <a href="#contacto" class="btn btn-contact btn-lg">Eventos</a>
+        </div>
+    </header>
+  
+   <!--Section Carrusel-->
+   <section class="container ">
+    <div id="carrusel" class="carousel slide my-5 d-none d-sx-none d-sm-none d-md-block" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+            <li data-target="#carrusel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-1.png" alt="chefs invitados">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-2.png" alt="torta recomiendo chile">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-3.png" alt="limones en mercado">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-4.png" alt="asado">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-5.png" alt="familia almorzando">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-6.png" alt="plato con salmon">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-7.png" alt="preparando mariscos">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-carrusel" src="assets/images/slider-8.png" alt="salteado de verduras">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!--fin del Carousel-->
+  
+    <!--Sección About-->
+    <section id="mi" class="container text-center my-5">
+        <h2 class="texto-responsivo font-weight-bold my-4">Destacados</h2>
 
   
-  <div class="wrapper row">
-    <!-- Carrusel -->
-    
-    <!-- Sidebar menu -->
-    
-    <aside class="sidebar col-sm-6 col-xl-4 mt-3">
-     
-      <!-- Contact menu section -->
-      <section class="contact-menu">
-        <div class="ant-row">
-          <div class="ant-col ant-col-24">
-             <!-- agregar content -->
-          </div>
+        <div class="row">
+            <div class="col-md-4">
+                <i class="fas fa-map fa-3x my-3 "></i>
+                <h3 class="fa-icon my-3 font-weight-bold">Eventos Recomiendo</h3>
+                <p class="my-3">Próximas fechas </p>
+            </div>
+  
+            <div class="col-md-4">
+                <i class="fas fa-bullhorn fa-3x my-3 "></i>
+                <h3 class="fa-icon my-3 font-weight-bold">Crítica culinaria</h3>
+                <p class="my-3">Chef invitados </p>
+            </div>
+  
+            <div class="col-md-4">
+                <i class="fas fa-camera fa-3x my-3 "></i>
+                <h3 class=" my-3 font-weight-bold">Imágenes de Eventos</h3>
+                <p class="my-3">Revive sabores compartidos  </p>
+            </div>
         </div>
+  
+    </section>
+  
+    <!--Sección programas-->
+    <section id="programas" class="platos my-5 p-5 ">
+        <h2 class="texto-responsivo text-center font-weight-bold text-white pb-4">Últimos capítulos</h2>
+  
+        <div class="text-left">
+  
+            <div class="card-deck">
+  
+                <div class="card">
+                    <img src="assets/images/card-1.jpg" class="card-img-top" alt="Plato con Asado">
+                    <div class="card-body">
+                        <h5 class="card-title">Asado en la Patagonia</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eum, </p>
+                        <a href="" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#asado">Ver más</a>
+                    </div>
+                </div>
+  
+                <div class="card">
+                    <img src="assets/images/card-2.jpg" class="card-img-top" alt="Plato con Papas">
+                    <div class="card-body">
+                        <h5 class="card-title">Papas del sur del mundo</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        <a href="" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#papas">Ver más</a>               
+                    </div>
+                </div>
+  
+                <div class="card">
+                    <img src="assets/images/card-3.jpg" class="card-img-top" alt=".Plato con Salmon">
+                    <div class="card-body">
+                        <h5 class="card-title">Salmones a la chilena</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <a href="" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#salmones">Ver más</a>
+                    </div>
+                </div>
+                
+            </div>
+  
+        </div>
+    </section>
+  
+    <!-- Modal -->
+    <div class=" modal fade" id="asado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <h2 class="texto-responsivo font-weight-bold my-4">Platos únicos</h2>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Asado en la Patagonia</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/card-1.jpg" class="card-img-top img-fluid my-3" alt="asado en la patagonia">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore numquam repellat laboriosam sapiente nostrum tenetur eius voluptates perferendis deleniti! Quisquam labore facere aliquid dicta est amet, quidem blanditiis non?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, repellendus excepturi distinctio perferendis maxime fuga quasi maiores eos minus aliquam rem officiis voluptates, impedit dolores debitis animi hic labore atque?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, animi! Facilis, laborum laudantium unde fugit atque pariatur voluptatibus excepturi dicta deserunt, accusamus recusandae ipsum dignissimos adipisci earum beatae doloremque minima.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class=" modal fade" id="papas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Papas del sur del mundo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/card-4.jpg" class="card-img-top img-fluid my-3" alt="papas del sur del mundo">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae accusantium voluptatibus veritatis a consequatur sequi error, corrupti unde illo excepturi sed mollitia itaque assumenda ex id recusandae, maxime iure voluptatem!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, repellendus excepturi distinctio perferendis maxime fuga quasi maiores eos minus aliquam rem officiis voluptates, impedit dolores debitis animi hic labore atque?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, consequatur iusto. Ullam eveniet iusto, esse voluptates, repellendus adipisci nihil, quo laudantium soluta possimus debitis atque voluptas! Nostrum illum incidunt quo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class=" modal fade" id="salmones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Salmones a la chilena</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/slider-6.png" class="card-img-top img-fluid my-3" alt="salmones a la chilena">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates officia at vel nam! Sunt iusto laborum in. Sint excepturi aperiam molestias eligendi obcaecati exercitationem accusantium dicta impedit provident. Aspernatur, inventore?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ad similique ut reprehenderit! Quod, laborum, enim ad voluptate voluptatibus aut dolorem architecto voluptates dolor, rem temporibus numquam perferendis repellendus sed!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium alias possimus culpa maxime illum aliquid omnis. Eum sapiente enim, esse aspernatur aliquid quas repudiandae maiores saepe, asperiores praesentium perspiciatis!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal-->
+  
+    <!--Sección Contacto-->
+    <section id="contacto" class="container my-5 text-left">
+        <h2 class="texto-responsivo font-weight-bold text-center">SUSCRÍBETE EN NUESTRO NEWSLETTER</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur autem ex, quod possimus, blanditiis, aperiam quasi quae ullam voluptates a optio ipsa nostrum maxime neque veritatis. Laborum iusto autem doloremque.</p>
+  
+    <!--
+    <div class="typeform-widget" data-url="https://franibe.typeform.com/to/XavIQj"
+        style="width: 100%; height: 500px;"></div> <script> (function() { var
+        qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement,
+        gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/";
+        if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js";
+        q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>-->
+  
         
         
+        
+        
+          <form>
+          <div class="form-group">
+            <label class="font-weight-bold" for="exampleInputEmail1">Nombre</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold" for="exampleInputEmail1">Correo Electrónico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Correo Electrónico">
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
+          </div>
+          <div class="text-right">
+            <button type="submit" class="btn btn-send">Enviar</button>
+          </div>
+        </form>
+      
       </section>
-    </aside>
     
+      <!--Footer-->
+    <footer class="bg-dark text-center text-light p-3">
+      
 
-    <!-- Main  -->
-    <main class="main  ">
-
-     
-
-      <div class="message-dashboard">
-        
-
-        <div class="contact-menu__img d-lg-none d-md-none ">
-           <!-- <img  src="assets/images/map.png" alt="map"> -->
+       <div class="container">
+        <div class="row text-center">
           
+            <div class="col-md-7 iconos-rrss text-center">
+                <a href="https://www.instagram.com/recomiendo/" target="_blank"><i title="Instagram" data-placement="bottom" data-toggle="tooltip" class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.facebook.com/recomiendo.chile" target="_blank"><i title="Facebook" data-placement="bottom" data-toggle="tooltip" class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.youtube.com/channel/UC-pN42NEK18v6UI8etXI8eg" target="_blank"><i title="Youtube" data-placement="bottom" data-toggle="tooltip" class="fab fa-youtube-square fa-2x"></i></a>  
+                <a href="https://twitter.com/recomiendochile?lang=es" target="_blank"><i title="Twitter" data-placement="bottom" data-toggle="tooltip" class="fab fa-twitter-square fa-2x"></i></a>                   
+            </div>
         </div>
-      
-      </div>
-    </main>
-    
-    <div class="contact-menu__app mt-3 d-none d-lg-block d-md-block ">
-      
-      
-    <div class="ant-card ant-card-bordered" style="min-height: 250px;">
-      <div class="ant-card-head">
-        <div class="ant-card-head-wrapper">
-          <div class="ant-card-head-title">
-            <!-- <span>Ubicacion</span> -->
-            
-          </div>
-        </div>
-      </div>
-      <div class="ant-card-body">
-        
-          <!--
-            <div class="input-group mb-3">
-               <input type="text" class="form-control" placeholder="Ingresa Orden de Flete" aria-label="Recipient's username" aria-describedby="basic-addon2">
-          
-          <div class="input-group-append">
-        <span class="input-group-text" id="basic-addon2">Buscar</span>
-            
-          </div>
-        </div> -->
-        <!-- <img class="ml-5" src="assets/images/map.png" alt="map"> -->
-        
-      </div>
-        </div>
-      </div>
+        <p>Recomiendo Chile 2021. Todos los derechos reservados.</p>
     </div>
-  </div>
-
-  <!-- Footer -->
+    </footer>
   
-
-<footer class="ant-layout-footer" style="text-align: center; background: rgb(169,	34,	5); color: rgb(255, 255, 255);">
-  <div class="ant-row" style="display: flex; flex-flow: row wrap; justify-content: center; align-items: center;">
-    <div class="ant-col ant-col-xs-24 ant-col-md-12" style="text-align: left;">
-      <img alt="" src="http://recomiendochile.cl/wp-content/uploads/2017/05/recomiendo-logo-home-3.png" width="180px">
-    </div>
-      <div class="ant-col ant-col-xs-24 ant-col-md-12">
-        <span style="font-size: 16px;">Siguenos en</span>
-        <a href="https://www.facebook.com/Recomiendo-Chile-307427189689322/" class="ant-btn ant-btn-link ant-btn-circle ant-btn-lg ant-btn-icon-only" style="border: 0px; background: transparent;">
-          <span role="img" aria-label="facebook" class="anticon anticon-facebook" style="color: rgb(255, 255, 255); font-size: 30px;">
-            <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="facebook" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6 44.2 0 82.1 3.3 93.2 4.8v107.9z"></path></svg>
-          </span>
-        </a>
-        <a href="https://twitter.com/RecomiendoChile" class="ant-btn ant-btn-link ant-btn-circle ant-btn-lg ant-btn-icon-only" style="border: 0px; background: transparent;">
-          <span role="img" aria-label="twitter-square" class="anticon anticon-twitter-square" style="color: rgb(255, 255, 255); font-size: 30px;">
-            <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="twitter-square" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM727.3 401.7c.3 4.7.3 9.6.3 14.4 0 146.8-111.8 315.9-316.1 315.9-63 0-121.4-18.3-170.6-49.8 9 1 17.6 1.4 26.8 1.4 52 0 99.8-17.6 137.9-47.4-48.8-1-89.8-33-103.8-77 17.1 2.5 32.5 2.5 50.1-2a111 111 0 01-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 01-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 00229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35 25.1-4.7 49.1-14.1 70.5-26.7-8.3 25.7-25.7 47.4-48.8 61.1 22.4-2.4 44-8.6 64-17.3-15.1 22.2-34 41.9-55.7 57.6z"></path></svg>
-          </span>
-        </a>
-        <a href="https://www.instagram.com/recomiendo_chile/" class="ant-btn ant-btn-link ant-btn-circle ant-btn-lg ant-btn-icon-only" style="border: 0px; background: transparent;">
-          <span role="img" aria-label="instagram" class="anticon anticon-instagram" style="color: rgb(255, 255, 255); font-size: 30px;">
-            <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="instagram" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 01-47.9 47.9z"></path></svg>
-          </span>
-        </a>
-        <!--<a href="https://www.linkedin.com/company/xxx/" class="ant-btn ant-btn-link ant-btn-circle ant-btn-lg ant-btn-icon-only" style="border: 0px; background: transparent;">
-          <span role="img" aria-label="linkedin" class="anticon anticon-linkedin" style="color: rgb(255, 255, 255); font-size: 30px;">
-            <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="linkedin" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1168.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path></svg>
-          </span>
-        </a>-->
-        
-        <a href="https://www.youtube.com/channel/UC-pN42NEK18v6UI8etXI8eg" class="ant-btn ant-btn-link ant-btn-circle ant-btn-lg ant-btn-icon-only" style="border: 0px; background: transparent;">
-          <span role="img" aria-label="youtube" class="anticon anticon-youtube" style="color: rgb(255, 255, 255); font-size: 30px;"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="youtube" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-            <path d="M941.3 296.1a112.3 112.3 0 00-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0082.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"></path></svg>
-          </span>
-        </a>
-      </div>
-    </div>
-    <div class="ant-row">
-      <div class="ant-col ant-col-xs-4 ant-col-md-16"></div>
-      <div class="ant-col ant-col-xs-20 ant-col-md-8" style="margin-top: 20px; margin-bottom: 20px; text-align: left;">
-         <!--<p class="footer__text">© 2020 - Todos los Derechos Reservados</p>--> 
-        
-        <!--<ul>
-          <li><a href="https://starken.eticaenlinea.cl/" style="font-size: 16px;">Linea Ética</a></li>
-          <li><a href="/recomendacion-embalaje" style="font-size: 16px;">Recomendaciones de embalaje</a></li>
-        </ul>-->
-      </div>
-    </div>
-  </footer>
-
-  <!-- Jquery V.3.3.1 -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <!-- Popper JS V.1.14.3 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <!-- Bootstrap JS V.4.1.3 -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-</body>
-</html> 
+       <!--jQuery 3.3.1 (sin slim)-->
+       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+      <!--Popper JS 1.16.0-->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <!--Bootstrap JS 4.5.0-->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <!-- Mi script -->
+      <script src="assets/js/script.js"></script>
+  
+    </body>
+  </html>

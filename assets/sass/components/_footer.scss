@@ -1,6 +1,33 @@
 /* COMPONENTS: FOOTER
    ========================================================================== */
-   .footer {
+   
+// Media Query
+@media (max-width: 768px) {
+    .footer img {
+        max-width: 90px;
+    }
+}
+/*Section Footer*/
+footer {
+  height: 130px;
+}
+footer h2, footer i {
+  text-decoration: none;
+  background-color: $dark;
+  color: $white;
+  margin: .5rem;
+}
+.iconos-rrss {
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+footer i:hover {
+  color: $red;
+  text-decoration: none;
+}
+
+/*
+.footer {
     height: 206px;
     background-color: $red;
     color: $white;
@@ -45,9 +72,4 @@
   display: inline-block;
   align-content: center;
 }
-// Media Query
-@media (max-width: 768px) {
-    .footer img {
-        max-width: 90px;
-    }
-}
+*/

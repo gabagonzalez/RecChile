@@ -10,6 +10,14 @@
   font-weight: $font-black;
   border-radius: 25px;
 }
+.btn-send, .btn-contact {
+  background-color: $red;
+  color: $white;
+}
+.fas {
+  color: $red;
+
+}
 /*Buscar*/
 #basic-addon2 {
   color: $white;
